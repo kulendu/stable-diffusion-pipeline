@@ -42,6 +42,25 @@ The directory structure will look something like this:
 
 **1. Image Generation:**  This [colab notebook](https://colab.research.google.com/drive/1unuR9Ta4i7qlV-Ll9RfBjkyN9dEA0Xwf?usp=sharing) contains all the steps for using **Diffusers** for generating synthetic images. This notebook generates 5 images with the prompt: <span style="color:orange">*"a man riding bike in a futuristic city with a neon lights in the background"*</span>. A a detailed technical explanation, please refer [here](https://github.com/kulendu/stable-diffusion-pipeline/blob/master/src/flux_model/STABLE_DIFF.md).
 
-![alt text](./images/stable_diff_img.png)
 
 **2. Preprocessing the generated images:**
+Following processings are done:
+
+1. `Resizing the image`: The `512 x 512` image is resized to `256 x 256`. Following image shows the comparision between original image (left) and resized image (right).
+![](./images/resized_compariso.png)
+
+2. `Converting to grayscale`: This conversion is done for simplifying the input to the CNN.
+![](./images/grayscale_comparison.png)
+
+3. `Normalizing the pixel values`: Normalizing the pixel values (0-255) to a standard scale of 0-1. 
+![](./images/histogram_comparison.png)
+
+the image shows the histograms of original and the normalized image (note the scales).
+
+4. Converting the processed images in tensor format, [.npy file](./processed_image_array.npy)
+
+`NOTE:` This [script](./utils/verify_tensors.py) verifys the shape of the dumped numpy file, and can be modifies further according to the use case.
+
+
+
+**3. Building the CNN:** Implementation details for building the architecture can be found [here](./src/flux_model/flux_model.ipynb)

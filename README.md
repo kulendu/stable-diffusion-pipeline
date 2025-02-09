@@ -40,7 +40,7 @@ The directory structure will look something like this:
     └── verify_tensors.py
 ```
 
-**1. Image Generation:**  This [colab notebook](https://colab.research.google.com/drive/1unuR9Ta4i7qlV-Ll9RfBjkyN9dEA0Xwf?usp=sharing) contains all the steps for using **Diffusers** for generating synthetic images. This notebook generates 5 images with the prompt: <span style="color:orange">*"a man riding bike in a futuristic city with a neon lights in the background"*</span>. A a detailed technical explanation, please refer here.
+**1. Image Generation:**  This [colab notebook](https://colab.research.google.com/drive/1unuR9Ta4i7qlV-Ll9RfBjkyN9dEA0Xwf?usp=sharing) contains all the steps for using **Diffusers** for generating synthetic images. This notebook generates 5 images with the prompt: <span style="color:orange">*"a man riding bike in a futuristic city with a neon lights in the background"*</span>. A a detailed technical explanation, please refer [here](https://github.com/kulendu/stable-diffusion-pipeline/blob/master/src/flux_model/STABLE_DIFF.md).
 
 ![alt text](./images/stable_diff_img.png)
 
